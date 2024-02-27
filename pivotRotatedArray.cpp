@@ -1,7 +1,11 @@
+#include<iostream>
+using namespace std;
+
 //https://www.codingninjas.com/studio/problems/search-in-rotated-sorted-array_1082554?source=youtube&campaign=love_babbar_codestudio2&leftPanelTabValue=PROBLEM
 
 
-int binarySearch(vector<int>& arr, int start, int end, int key) {
+int binarySearch(vector<int>& arr, int start, int end, int key) 
+{
     int mid;
     mid = start + (end - start) / 2;
     while (start <= end) {
@@ -34,7 +38,8 @@ int pivotInArray(vector<int>& arr, int size){
     return start;
 }
 
-int search(vector<int>& arr, int n, int k) {
+int search(vector<int>& arr, int n, int k) 
+{
     int pivot = pivotInArray(arr, n);
 
     // If pivot is 0, the array is not rotated
@@ -47,3 +52,6 @@ int search(vector<int>& arr, int n, int k) {
         return binarySearch(arr, pivot, n - 1, k);
 }
 
+int main(){
+
+}
